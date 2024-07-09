@@ -14,7 +14,6 @@
 }
 .calculator {
   max-width: 428px;
-  height: 926px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -51,7 +50,7 @@
 }
 .input-btn {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, auto);
   gap: 14px;
 }
 .grey {
@@ -62,6 +61,7 @@
 }
 .orange {
   background-color: #f1a33b;
+  color: white;
   width: 88px;
   height: 88px;
   border-radius: 50%;
