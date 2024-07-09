@@ -13,7 +13,7 @@
   color: black;
 }
 .calculator {
-  max-width: 428px;
+  max-width: 458px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -37,6 +37,10 @@
 }
 .empty {
   height: 250px;
+  background-image: url(../images/mumet.png);
+  object-fit: cover;
+  border: 10px solid white;
+  border-radius: 30px;
 }
 .input-btn > button {
   font-size: 34px;

@@ -19,7 +19,7 @@ Array.from(buttons).forEach((btn) => {
     }
     // submit the value
     if (event.currentTarget.textContent === "=") {
-      //plus
+      //plus aritmathics operation
       if (result.textContent.includes("+")) {
         const raw = result.textContent.slice(0, -1).split("+");
         const nums = raw.map((num) => parseInt(num));
@@ -27,6 +27,7 @@ Array.from(buttons).forEach((btn) => {
           return total + plus;
         });
       }
+      //minus aritmathics operation
       if (result.textContent.includes("-")) {
         const raw = result.textContent.slice(0, -1).split("-");
         const nums = raw.map((num) => parseInt(num));
@@ -34,6 +35,7 @@ Array.from(buttons).forEach((btn) => {
           return total - minus;
         });
       }
+      // divide aritmathics operation
       if (result.textContent.includes("/")) {
         const raw = result.textContent.slice(0, -1).split("/");
         const nums = raw.map((num) => parseInt(num));
@@ -41,6 +43,7 @@ Array.from(buttons).forEach((btn) => {
           return total / divide;
         });
       }
+      // times aritmathics operation
       if (result.textContent.includes("×")) {
         const raw = result.textContent.slice(0, -1).split("×");
         const nums = raw.map((num) => parseInt(num));
@@ -48,12 +51,22 @@ Array.from(buttons).forEach((btn) => {
           return total * times;
         });
       }
+      // percentage aritmathics operation
       if (result.textContent.includes("%")) {
         const raw = result.textContent.slice(0, -1).split("%");
         const nums = raw.map((num) => parseInt(num));
         result.textContent = nums.reduce((total, percentage) => {
           return total / 100;
         });
+      }
+    }
+    // add minus in curent number
+    if (result.textContent.includes("+/-")) {
+      const num = result.textContent;
+      let convertNum = 0;
+      if (result.textContent.includes("-")) {
+        convertNum = -parseInt(num);
+        result.textContent = convertNum;
       }
     }
   });
