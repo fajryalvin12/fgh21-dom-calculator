@@ -22,7 +22,7 @@ Array.from(buttons).forEach((btn) => {
       //plus aritmathics operation
       if (result.textContent.includes("+")) {
         const raw = result.textContent.slice(0, -1).split("+");
-        const nums = raw.map((num) => parseInt(num));
+        const nums = raw.map((num) => Number(num));
         result.textContent = nums.reduce((total, plus) => {
           return total + plus;
         });
@@ -30,7 +30,7 @@ Array.from(buttons).forEach((btn) => {
       //minus aritmathics operation
       if (result.textContent.includes("-")) {
         const raw = result.textContent.slice(0, -1).split("-");
-        const nums = raw.map((num) => parseInt(num));
+        const nums = raw.map((num) => Number(num));
         result.textContent = nums.reduce((total, minus) => {
           return total - minus;
         });
@@ -38,7 +38,7 @@ Array.from(buttons).forEach((btn) => {
       // divide aritmathics operation
       if (result.textContent.includes("/")) {
         const raw = result.textContent.slice(0, -1).split("/");
-        const nums = raw.map((num) => parseInt(num));
+        const nums = raw.map((num) => Number(num));
         result.textContent = nums.reduce((total, divide) => {
           return total / divide;
         });
@@ -46,7 +46,7 @@ Array.from(buttons).forEach((btn) => {
       // times aritmathics operation
       if (result.textContent.includes("×")) {
         const raw = result.textContent.slice(0, -1).split("×");
-        const nums = raw.map((num) => parseInt(num));
+        const nums = raw.map((num) => Number(num));
         result.textContent = nums.reduce((total, times) => {
           return total * times;
         });
@@ -54,7 +54,7 @@ Array.from(buttons).forEach((btn) => {
       // percentage aritmathics operation
       if (result.textContent.includes("%")) {
         const raw = result.textContent.slice(0, -1).split("%");
-        const nums = raw.map((num) => parseInt(num));
+        const nums = raw.map((num) => Number(num));
         result.textContent = nums.reduce((total, percentage) => {
           return total / 100;
         });
